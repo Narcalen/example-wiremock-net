@@ -1,0 +1,29 @@
+{
+  "Guid": "be289d11-6cba-4ba9-be21-0e45979296b3",
+  "Priority": 1,
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "ExactMatcher",
+          "Pattern": "/test"
+        }
+      ]
+    },
+    "Methods": [
+      "get"
+    ]
+  },
+  "Response": {
+    "StatusCode": 200,
+    "Headers": { "Content-Type": "application/json; charset=utf-8" },
+    "BodyAsJson": {
+          "testResponse": {
+            "randomInt": "{{Random Type=\"Integer\" Min=100 Max=999999}}",
+            "dateNow": "Mon Jan 25 2021 17:55:23 GMT+0000",
+            "updatedAt": "Mon Jan 25 2021 17:55:23 GMT+0000"
+          }
+    },
+    "UseTransformer": true
+  }
+}
